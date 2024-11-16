@@ -4,11 +4,10 @@
 - set up an avail account with avail tokens
     - set up subwallet
     - get testnet token from [avail faucet](https://faucet.avail.tools/)
-        - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue : the avail faucet "see transaction details" button takes me to "https://explorer.avail.so"
-        the site seems not working. it is loading forever. 
+        - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue : the avail faucet "see transaction details" button takes me to "https://explorer.avail.so", which seems to load indefinitely 
         ![alt text](image.png)
         
-        whereas the subwallet takes me to this explorer "https://avail-turing.subscan.io/", which works well.
+       However, SubWallet directs to this explorer "https://avail-turing.subscan.io/", which works correctly.
 
 - get avail app id
     - created an app id on avail testnet
@@ -20,21 +19,22 @@ get arbitrum sepolia testnet token with ethglobal faucet
 
 # Download avail-nitro-node docker image
 ## Step-1: Download the avail-nitro-node image from docker hub
-no issues. the docker image version in the doc is the latest one
+No issues. The Docker image version specified in the documentation is the latest one.
 # Deploy Rollup Contracts
+No issues. The contract tag version specified in the documentation is the latest one.
 ## Step-1: Download the avail-nitro-contracts with Avail DA
 no issues. the contract tag version used in the doc is the latest one
 ## Step-2: Create .env file
 - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue: there is no `.env.sample file`. there is only `.env.sample.goerli` file
 ## Step-3: Create .script/config.ts file
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue: the title should be `Create scripts/config.ts file` instead of ` Create .script/config.ts file`
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue: The title should be corrected to "Create scripts/config.ts file" instead of "Create .script/config.ts file."
 ## Step-4: Deploy your chain's base contracts to Arbitrum Sepolia!
 ```bash
 yarn build:forge:yul
 yarn run deploy-eth-rollup --network arbSepolia
 ```
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue: i got error `provider error code=UNPREDICTABLE_GAS_LIMIT` when i run `yarn run deploy-eth-rollup --network arbSepolia`
-Deployment was success after i increased the max fee per gas to 10gwei.
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue: Got a provider error code=UNPREDICTABLE_GAS_LIMIT when running yarn run deploy-eth-rollup --network arbSepolia.
+- solution: Deployment succeeded after increasing the max fee per gas to 10 Gwei.
     ```bash
     yarn run deploy-eth-rollup --network arbSepolia
     yarn run v1.22.22
@@ -72,4 +72,4 @@ docker-compose up -d
 ```
 the chain is running at localhost!
 ![alt text](image-2.png)
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue: the `docker-compose up -d` should be `docker compose up -d` for Docker Desktop (20.10.0 or later)
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) issue: For Docker Desktop (v20.10.0 or later), use docker compose up -d instead of docker-compose up -d.
