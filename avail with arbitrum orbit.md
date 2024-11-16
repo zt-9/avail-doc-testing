@@ -62,10 +62,10 @@ ValidatorWalletCreator Contract created at address: 0x367Ad15A9aDFF8C2D1D51892F2
 ```
 # Spin up the chain using orbit-setup-script
 ## Step-1: Download orbit-setup-script
-# Step-2: Create nodeConfig.json in ./config
-# Step-3: Create orbitSetupScriptConfig.json in ./config
-# Step-4: Update docker-compose file of orbit-setup-script
-# Step-5: Run your chain
+## Step-2: Create nodeConfig.json in ./config
+## Step-3: Create orbitSetupScriptConfig.json in ./config
+## Step-4: Update docker-compose file of orbit-setup-script
+## Step-5: Run your chain
 ```
 cd orbit-setup-script
 docker-compose up -d
